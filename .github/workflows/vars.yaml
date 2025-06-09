@@ -1,4 +1,4 @@
-name: Exibindo Váriavel de Ambiente
+name: Exibindo as Variáveis do Repositório
 on: 
   workflow_dispatch:
 jobs:
