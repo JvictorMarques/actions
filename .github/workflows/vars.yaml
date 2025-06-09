@@ -6,3 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ vars.VARIAVEL_TESTE }}"
+
+      - run: echo "${{ toJson(vars)}}"
