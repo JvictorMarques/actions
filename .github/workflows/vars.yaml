@@ -1,0 +1,8 @@
+name: Exibindo Váriavel de Ambiente
+on: 
+  workflow_dispatch:
+jobs:
+  vars:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ vars.VARIAVEL_TESTE }}"
