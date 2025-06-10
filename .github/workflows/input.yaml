@@ -33,7 +33,7 @@ jobs:
         run: |
           echo "Contexto de Inputs:"
           echo "${{ toJson(inputs) }}"
-      - name: Exibir 
+      - name: Exibir os Input
         run: |
           echo "Versão: ${{ inputs.versao }}"
           echo "Número do Card: ${{ inputs.numero_card }}"
