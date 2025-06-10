@@ -11,8 +11,7 @@ jobs:
         run: |
           echo "Gerando número aleatório..."
           RANDOM_NUMBER=$((RANDOM % 100))
-          echo "$RANDOM_NUMBER" >> $GITHUB_OUTPUT
-
+          echo "random_number=$RANDOM_NUMBER" >> $GITHUB_OUTPUT
       - name: Exibindo número aleatório
         run: |
-          echo "Número aleatório gerado: ${{ steps.random_number.outputs.RANDOM_NUMBER }}"
+          echo "Número aleatório gerado: ${{ steps.random_number.outputs.random_number }}"
