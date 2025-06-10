@@ -29,9 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: upload-artifact
     steps:
-      - name: Listar arquivos de diretórios
+      - name: Listar arquivos de diretórios para verificar se o diretório está vazio
         run: ls
       - name: Download dos artefatos
         uses: actions/download-artifact@v4
         with:
           name: ${{ env.filename }}
+      - name: Listar arquivos de diretórios para verificar se o diretório não está vazio
+        run: ls
