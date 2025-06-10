@@ -1,6 +1,5 @@
 name: Utilizando Inputs no GitHub Actions
 on:
-  push:
   workflow_dispatch:
     inputs:
       versao:
