@@ -21,6 +21,10 @@ jobs:
     needs: gerando_output_shell
     steps:
       - name: Gerar senha com action personalizada
-        id: generate_password
-        uses: aammirmirza/Random-Password-Generator
+        id: generatedpassword
+        uses: aammirmirza/RandomPasswordGenerator@v1.1
+        with:
+          length: 15
+      - name: Exibir senha gerada
         run: |
+          echo "Senha gerada: ${{ steps.generatedpassword.outputs.password }}"
