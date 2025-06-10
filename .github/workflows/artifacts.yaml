@@ -13,11 +13,11 @@ jobs:
       - name: Gerar arquivo
         run: |
           mkdir artifacts
-          echo "Arquivos de teste 01" > /artifacts/primeiro_arquivo.txt
-          echo "Arquivos de teste 02" > /artifacts/primeiro_arquivo.txt
-          echo "Arquivos de teste 03" > /artifacts/primeiro_arquivo.txt
-          echo "Arquivos de teste 04" > /artifacts/primeiro_arquivo.txt
-          echo "Arquivos de teste 05" > /artifacts/primeiro_arquivo.txt
+          echo "Arquivos de teste 01" > ./artifacts/primeiro_arquivo.txt
+          echo "Arquivos de teste 02" > ./artifacts/segundo_arquivo.txt
+          echo "Arquivos de teste 03" > ./artifacts/terceiro_arquivo.txt
+          echo "Arquivos de teste 04" > ./artifacts/quarto_arquivo.txt
+          echo "Arquivos de teste 05" > ./artifacts/quinto_arquivo.txt
       - name: Upload dos artefatos
         uses: actions/upload-artifact@v4
         with:
