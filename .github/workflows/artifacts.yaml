@@ -25,13 +25,13 @@ jobs:
           path: ./artifacts
       - name: Listar novamente os arquivos de diretórios
         run: ls
-download-artifact:
-  runs-on: ubuntu-latest
-  needs: upload-artifact:
-  steps:
-    - name: Listar arquivos de diretórios
-      run: ls
-    - name: Download dos artefatos
-      uses: actions/download-artifact@v4
-      with:
-        name: ${{ env.filename }}
+  download-artifact:
+    runs-on: ubuntu-latest
+    needs: upload-artifact
+    steps:
+      - name: Listar arquivos de diretórios
+        run: ls
+      - name: Download dos artefatos
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.filename }}
